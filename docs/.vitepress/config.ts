@@ -11,7 +11,7 @@ export default defineConfig({
     description: 'DDD的博客',
     // true:显示切换夜间按钮，false：不显示，默认true
     // appearance: true,
-    // 部署时写你的仓库名
+    // 部署时写你的仓库名，比如ddd
     base: '/DDD-BLOG/',
     // 类似html中head标签里的link标签
     head: [['link', { rel: 'icon', href: '/favicon.ico' }]],// 添加网站图标

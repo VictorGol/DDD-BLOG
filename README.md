@@ -1,1 +1,1 @@
-hello
+To check out docs, visit [here](https://victorgol.github.io/DDD-BLOG/)

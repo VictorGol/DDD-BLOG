@@ -79,7 +79,7 @@ export default defineConfig({
     description: '总结归纳学习中的知识',
     // true:显示切换夜间按钮，false：不显示，默认true
     // appearance: true,
-    // 如果你想部署网站为https://foo.github.io/bar/，那么base为'/bar/'
+    // 部署时写你的仓库名，比如ddd
     base: '/ddd/',
     // 类似html中head标签里的link标签
     head: [['link', { rel: 'icon', href: '/favicon.ico' }]],// 添加网站图标
@@ -249,3 +249,48 @@ yarn docs:serve
 
 没问题就好
 
+将项目发布到`GitHub`
+
+根目录下创建`.github/workflows/deploy.yml`
+
+里面写上
+
+```yaml
+name: Deploy
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 16
+          cache: yarn
+      - run: yarn install --frozen-lockfile
+
+      - name: Build
+        run: yarn docs:build
+
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: docs/.vitepress/dist
+          # cname: example.com # if wanna deploy to custom domain
+```
+
+注意提交的分支这里是`main`，如果是`master`，则进行修改
+
+添加好之后，正常`push`到`GitHub`，在GitHub的本项目的setting页面，将Branch切换到gh-pages，如下：
+
+![pic1](D:\dhr\z-intersting\me\xx\blog\code_vitepress\docs\publilc\pic1.png)
+
+这样，之后每一次`push`都会自动部署，部署后博客的网址为：`https://victorgol.github.io/DDD-BLOG/`，格式`https://<username>.github.io/<repo>/`
