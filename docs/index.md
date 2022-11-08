@@ -10,6 +10,6 @@ hero:
       link: /Introduction/
     - theme: alt
       text: View on GitHub
-      link: https://github.com/VictorGol
+      link: https://github.com/VictorGol/DDD-BLOG
 ---
 

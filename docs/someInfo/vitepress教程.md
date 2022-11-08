@@ -231,5 +231,21 @@ features:
 layout: page # 当前页面没有样式
 ```
 
+## 步骤3 部署
 
+本地先测试
+
+先
+
+```shell
+yarn docs:build
+```
+
+后
+
+```shell
+yarn docs:serve
+```
+
+没问题就好
 

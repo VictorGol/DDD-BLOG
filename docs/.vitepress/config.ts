@@ -11,8 +11,8 @@ export default defineConfig({
     description: 'DDD的博客',
     // true:显示切换夜间按钮，false：不显示，默认true
     // appearance: true,
-    // 如果你想部署网站为https://foo.github.io/bar/，那么base为'/bar/'，这里指定后，后面以/开头的link自动放到bar/后
-    base: '/ddd/',
+    // 部署时写你的仓库名
+    base: '/DDD-BLOG/',
     // 类似html中head标签里的link标签
     head: [['link', { rel: 'icon', href: '/favicon.ico' }]],// 添加网站图标
     // 默认为false，为true时，不会因为deadlinks而编译失败
@@ -40,9 +40,9 @@ export default defineConfig({
         lastUpdatedText: 'Updated Date',
         // 右侧目录的标题，默认是On this page
         outlineTitle: '目录',
-        // 导航栏配置，在右上角
+        // 导航栏配置，在右上角偏左
         nav: [
-            { text: 'Github', link: 'https://github.com/VictorGol' }
+            // { text: 'Github', link: 'https://github.com/VictorGol/DDD-BLOG' }
         ],
         sidebar: [
             {
@@ -64,7 +64,7 @@ export default defineConfig({
         // 显示社交账号，在右上角
         // 支持'discord''facebook''github''instagram''linkedin''slack''twitter''youtube'{ svg: string }
         socialLinks: [
-            { icon: 'github', link: 'https://github.com/VictorGol' },
+            { icon: 'github', link: 'https://github.com/VictorGol/DDD-BLOG' },
         ],
         // 页脚，没有侧边栏时才显示
         footer: {
