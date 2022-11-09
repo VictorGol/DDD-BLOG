@@ -4,4 +4,4 @@
 
 我对 [vue](https://vuejs.org) 算是比较熟悉，毕竟学的时间最长，我的 [github地址](https://github.com/VictorGol) 在此，有两个小项目，自己做着玩的。
 
-2022年11月8日，用了 [vitepress](https://vitepress.vuejs.org) 做了这个博客，架子搭建的很快。这之前其实也写了一些笔记，知识有些不那么规范，不好放上来，这里就放新的笔记了。
+2022年11月8日，用了 [vitepress](https://vitepress.vuejs.org) 做了这个博客，架子搭建的很快。这之前其实也写了一些笔记，只是不规范，不好放上来，这里就放新的笔记了。
