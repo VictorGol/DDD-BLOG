@@ -291,6 +291,6 @@ jobs:
 
 添加好之后，正常`push`到`GitHub`，在GitHub的本项目的`setting`页面，将`Branch`切换到`gh-pages`，如下：
 
-![主界面](../public/pic1.png)
+![主界面](/pic1.png)
 
 这样，之后每一次`push`都会自动部署，部署后博客的网址为：`https://victorgol.github.io/DDD-BLOG/`，格式`https://<username>.github.io/<repo>/`

@@ -23,6 +23,7 @@ export default defineConfig({
     markdown: {
         // theme: 'material-palenight', // 语法高亮的主题
         lineNumbers: true, // 代码块加行数
+        // 还有一些属性没写在这里，就不写了
     },
     // 编译输出位置，默认./.vitepress/dist
     // outDir: './.vitepress/dist',
@@ -46,20 +47,26 @@ export default defineConfig({
         ],
         sidebar: [
             {
-                text: '知识点',
-                collapsible: true, // 可折叠
-                // collapsed: true, // 初始是否折叠
+                text: '介绍',
                 items: [
-                    { text: 'ajax', link: '/someInfo/ajax' },
-                    { text: 'Go', link: '/someInfo/golang' },
+                    { text: '开始吧', link: '/Introduction/' },
                 ]
             },
             {
                 text: 'vitepress',
                 items: [
-                    { text: 'vitepress教程', link: '/someInfo/vitepress教程' },
+                    { text: '基础', link: '/vitepress/base' },
+                    { text: '在Makedown中使用Vue', link: '/vitepress/Vue与Markdown' },
                 ]
-            }
+            },
+            {
+                text: '其他知识',
+                // collapsible: true, // 可折叠
+                // collapsed: true, // 初始是否折叠
+                items: [
+                    { text: 'ajax', link: '/others/Ajax' },
+                ]
+            },
         ],
         // 显示社交账号，在右上角
         // 支持'discord''facebook''github''instagram''linkedin''slack''twitter''youtube'{ svg: string }

@@ -1,4 +1,6 @@
-## 1 介绍
+# Ajax了解
+
+## 介绍
 
 用于与服务器交换数据，而不刷新整个页面
 
@@ -6,7 +8,7 @@
 
 现在则是服务端返回数据，由前端负责数据绑定，页面仅有局部改变，所以页面无需刷新。
 
-## 2 使用
+## 使用
 
 ```javascript
 // 创建ajax实例对象
@@ -27,26 +29,7 @@ xhr.onreadystatechange = function () {
 xhr.send(JSON.stringify({username: 'mabin', pwd: '1233456'}));
 ```
 
-## 3 其他
-
-设置请求头
-
-```javascript
-setRequestHeader(header,value)
-```
-
-比如
-
-```javascript
-xhr.setRequestHeader("Content-type","application/x-www-form-urlencoded");
-```
-
-```javascript
-xhr.responseText // 获取响应文本，字符串格式
-xhr.responseXML // 获取响应文本，估计用不到
-```
-
-## 4 响应
+## 响应
 
 每当 `readyState` 改变时，就会触发 `onreadystatechange` 事件。
 
@@ -67,5 +50,24 @@ status
 
 200: "OK"
 404: 未找到页面
+```
+
+## 其他
+
+设置请求头
+
+```javascript
+setRequestHeader(header,value)
+```
+
+比如
+
+```javascript
+xhr.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+```
+
+```javascript
+xhr.responseText // 获取响应文本，字符串格式
+xhr.responseXML // 获取响应文本，估计用不到
 ```
 
