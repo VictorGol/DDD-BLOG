@@ -57,6 +57,8 @@ export default defineConfig({
                 items: [
                     { text: '基础', link: '/vitepress/base' },
                     { text: '在Makedown中使用Vue', link: '/vitepress/Vue与Markdown' },
+                    { text: 'API及内置组件', link: '/vitepress/API及内置组件' },
+                    { text: 'Asset Handling', link: '/vitepress/asset-handling' },
                 ]
             },
             {
@@ -89,9 +91,9 @@ export default defineConfig({
         //     placement: 'your-carbon-placement'
         // },
         // 文档页脚，下一页和上一页的文本
-        docFooter: {
-            prev: '看看上一页',
-            next: '看看下一页'
-        }
+        // docFooter: {
+        //     prev: '看看上一页',
+        //     next: '看看下一页'
+        // }
     }
 })
