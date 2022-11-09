@@ -66,7 +66,15 @@ export default defineConfig({
                 // collapsible: true, // 可折叠
                 // collapsed: true, // 初始是否折叠
                 items: [
-                    { text: 'ajax', link: '/others/Ajax' },
+                    { text: 'Ajax', link: '/others/Ajax' },
+                ]
+            },
+            {
+                text: '关于',
+                // collapsible: true, // 可折叠
+                // collapsed: true, // 初始是否折叠
+                items: [
+                    { text: '关于本人', link: '/about/' },
                 ]
             },
         ],
