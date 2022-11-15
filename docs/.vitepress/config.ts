@@ -75,7 +75,6 @@ export default defineConfig({
                 // collapsed: true, // 初始是否折叠
                 items: [
                     { text: '技术网站', link: '/about/技术网站' },
-                    { text: '关于本人', link: '/about/' },
                 ]
             },
         ],
