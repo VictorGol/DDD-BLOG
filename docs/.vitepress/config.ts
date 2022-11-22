@@ -67,6 +67,7 @@ export default defineConfig({
                 // collapsed: true, // 初始是否折叠
                 items: [
                     { text: 'Ajax', link: '/others/Ajax' },
+                    { text: '时间管理大师', link: '/others/个人学习指南' },
                 ]
             },
             {
