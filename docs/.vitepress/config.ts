@@ -53,6 +53,14 @@ export default defineConfig({
                 ]
             },
             {
+                text: '2022',
+                collapsible: true, // 可折叠
+                // collapsed: true, // 初始是否折叠
+                items: [
+                    { text: '11月', link: '/2022/11月' },
+                ]
+            },
+            {
                 text: 'vitepress',
                 items: [
                     { text: '基础', link: '/vitepress/base' },
