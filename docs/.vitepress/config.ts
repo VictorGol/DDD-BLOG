@@ -66,6 +66,7 @@ export default defineConfig({
                 // collapsible: true, // 可折叠
                 // collapsed: true, // 初始是否折叠
                 items: [
+                    { text: '问题收录', link: '/others/index' },
                     { text: 'Ajax', link: '/others/Ajax' },
                     { text: '时间管理大师', link: '/others/个人学习指南' },
                 ]
