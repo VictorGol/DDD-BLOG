@@ -2,24 +2,24 @@
 layout: home
 hero:
   name: DDD BLOG
-  text: DDD's personal blog
-  tagline: A blog for taking study notes
+  text: DDD 博客
+  tagline: 一个个人博客
   actions:
     - theme: brand
-      text: Get Started
+      text: 开始
       link: /Introduction/
     - theme: alt
       text: View on GitHub
       link: https://github.com/VictorGol/DDD-BLOG
 features:
   - icon: ⚡️
-    title: Notes, The palest ink is better than the best memory
-    details: Tell me and I forget. Teach me and I remember. Involve me and I learn
+    title: 白昼
+    details: 一个人要是领悟到他的每一个白昼，不过是另一个夜晚，领悟到他的两只眼睛等于别人的一只眼睛，那么他就会奋力去求索真正的白昼
   - icon: 🖖
-    title: Where there is life, there is learning
-    details: Later, respectively, wander and suffer sorrow
+    title: 飞翔
+    details: 有些人的飞翔，正是为了坠落
   - icon: 🛠️
-    title: Keep love
-    details: The apple doesn't fall far from the tree
+    title: 伊卡洛斯
+    details: 也许有人能够将我践踏
 ---
 
