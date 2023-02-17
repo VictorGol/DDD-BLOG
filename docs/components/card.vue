@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { onMounted, onUnmounted, Ref, ref } from "vue";
+import { onUnmounted, Ref, ref } from "vue";
 
 defineProps<{
   /** 文本 */ text: string;
@@ -44,7 +44,7 @@ onUnmounted(() => {
     @mouseover="elMouseover(true)"
     @mouseleave="elMouseover(false)"
   >
-    <div v-html="text" @click="copyText(text)"></div>
+    <div class="text" v-html="text" @click="copyText(text)"></div>
     <!-- 过渡 -->
     <!-- <Transition>
       <div class="tip" v-if="copyStatus">复制成功</div>
@@ -57,29 +57,31 @@ onUnmounted(() => {
   color: #213547;
   padding: 20px;
   // background-color: rgb(198, 129, 59);
-  margin: 10px 0;
+  margin: 20px 0;
   border-radius: 12px;
   box-shadow: 4px 4px 10px 0px rgba(36, 36, 36, 0.6);
   transition: all 0.3s;
   box-sizing: border-box;
   position: relative;
-  cursor: pointer;
-  .tip {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: rgba($color: #fafafa, $alpha: 1);
-    border-radius: 12px;
+  .text {
+    cursor: pointer;
   }
+  // .tip {
+  //   position: absolute;
+  //   top: 0;
+  //   right: 0;
+  //   bottom: 0;
+  //   left: 0;
+  //   display: flex;
+  //   justify-content: center;
+  //   align-items: center;
+  //   background-color: rgba($color: #fafafa, $alpha: 1);
+  //   border-radius: 12px;
+  // }
 }
 
 .wrap:hover {
-  box-shadow: 2px 2px 6px 0px rgba(36, 36, 36, 0.6);
+  box-shadow: 1px 1px 3px 0px rgba(36, 36, 36, 0.6);
 }
 
 .v-enter-active,

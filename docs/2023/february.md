@@ -1,8 +1,8 @@
 # 2023 年 2 月
 
 <script setup>
-  import Card from './components/card.vue'
-  import Cover from './components/cover.vue'
+  import Card from '../components/card.vue'
+  import Cover from '../components/cover.vue'
 </script>
 
 <!-- ![世界为你闪烁](https://xxx "封面") -->
@@ -63,13 +63,41 @@ alt="世界为你闪烁">
 
 <Card text="即使未来不能改变，我也要自己决定到达那个结果的过程" />
 
-## 代码
+## 学习
 
 ```javascript
 // 获取当前时间字符串，比如：'2/17/2023, 3:56:19 PM'
 new Date().toLocaleString()
 ```
 
+```javascript
+// el-table合并单元格，在el-table元素里写上:span-method="spanMethod"
+spanMethod({ row, column, rowIndex, columnIndex }) {
+    // 参数分别代表：开始行索引、开始列索引、合并几行、合并几列
+    const temp = [0,0,1,2]
+    if (rowIndex === temp[0] && columnIndex === temp[1]) {
+        return {
+            rowspan: temp[2],
+            colspan: temp[3]
+        }
+    }
+    // 这个条件是清除合并单元格后数据出现偏移的情况
+    // 这么写的原因请参考https://blog.csdn.net/qq_42887496/article/details/124047061
+	// 它本质是将一个单元格变成几行几列的格子，原来在它旁边的格子会被挤开，所以要将被挤开的格子删掉
+    else if (rowIndex >= temp[0] && rowIndex < temp[0] + temp[2]
+             && columnIndex >= temp[1] && columnIndex < temp[1] + temp[3]) {
+        return {
+            rowspan: 0,
+            colspan: 0
+        }
+    }
+}
+```
+
+```javascript
+// 生成连续数组
+Array.from({ length: 12 }, (_, i) => i + 1 + '月')
+```
 
 
-## 第三
+

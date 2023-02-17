@@ -62,11 +62,12 @@ export default defineConfig({
                 ]
             },
             {
-                text: '2023',
+                text: '2023年记事',
                 collapsible: true, // 可折叠
                 // collapsed: true, // 初始是否折叠
                 items: [
-                    { text: '2月', link: '/2023/2月' },
+                    { text: '2月份', link: '/2023/february' },
+                    { text: '3月份', link: '/2023/march' },
                 ]
             },
             // {

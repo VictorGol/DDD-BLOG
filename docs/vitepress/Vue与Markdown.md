@@ -202,7 +202,7 @@ npm install -D sass
 
 <div class="text">这是一段文字</div>
 
-<style lang="sass">
+<style lang="sass" scoped>
 .text
     color: blue
     font-weight: bold
@@ -212,7 +212,7 @@ npm install -D sass
 
 ```markdown
 <div class="text">这是一段文字</div>
-<style lang="sass">
+<style lang="sass" scoped>
 .text
     color: blue
     font-weight: bold
