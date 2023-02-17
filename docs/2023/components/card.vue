@@ -24,16 +24,16 @@ const timer = ref();
 const copyStatus = ref(false);
 // 复制文本到粘贴板
 const copyText = (val: string) => {
-  navigator.clipboard.writeText(val).then(() => {
-    copyStatus.value = true;
-    timer.value = setTimeout(() => {
-      copyStatus.value = false;
-    }, 1000);
-  });
+  // navigator.clipboard.writeText(val).then(() => {
+  //   copyStatus.value = true;
+  //   timer.value = setTimeout(() => {
+  //     copyStatus.value = false;
+  //   }, 1000);
+  // });
 };
 
 onUnmounted(() => {
-  clearTimeout(timer.value);
+  timer.value && clearTimeout(timer.value);
 });
 </script>
 
@@ -46,9 +46,9 @@ onUnmounted(() => {
   >
     <div v-html="text" @click="copyText(text)"></div>
     <!-- 过渡 -->
-    <Transition>
+    <!-- <Transition>
       <div class="tip" v-if="copyStatus">复制成功</div>
-    </Transition>
+    </Transition> -->
   </div>
 </template>
 
