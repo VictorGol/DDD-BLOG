@@ -4,4 +4,4 @@
 
 这个博客使用[`vitepress`](https://vitepress.vuejs.org)搭建，用来作为自己的学习笔记。
 
-[点击阅读](../2023/february.md)
+[点击开始阅读](../2023/february.md)
