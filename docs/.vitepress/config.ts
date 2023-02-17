@@ -53,14 +53,6 @@ export default defineConfig({
                 ]
             },
             {
-                text: '2022',
-                collapsible: true, // 可折叠
-                // collapsed: true, // 初始是否折叠
-                items: [
-                    { text: '11月', link: '/2022/11月' },
-                ]
-            },
-            {
                 text: 'vitepress',
                 items: [
                     { text: '基础', link: '/vitepress/base' },
@@ -70,23 +62,21 @@ export default defineConfig({
                 ]
             },
             {
-                text: '其他知识',
-                // collapsible: true, // 可折叠
+                text: '2023',
+                collapsible: true, // 可折叠
                 // collapsed: true, // 初始是否折叠
                 items: [
-                    { text: '问题收录', link: '/others/index' },
-                    { text: 'Ajax', link: '/others/Ajax' },
-                    { text: '时间管理大师', link: '/others/个人学习指南' },
+                    { text: '2月', link: '/2023/2月' },
                 ]
             },
-            {
-                text: '关于',
-                // collapsible: true, // 可折叠
-                // collapsed: true, // 初始是否折叠
-                items: [
-                    { text: '技术网站', link: '/about/技术网站' },
-                ]
-            },
+            // {
+            //     text: '关于',
+            //     // collapsible: true, // 可折叠
+            //     // collapsed: true, // 初始是否折叠
+            //     items: [
+            //         { text: '技术网站', link: '/about/技术网站' },
+            //     ]
+            // },
         ],
         // 显示社交账号，在右上角
         // 支持'discord''facebook''github''instagram''linkedin''slack''twitter''youtube'{ svg: string }
