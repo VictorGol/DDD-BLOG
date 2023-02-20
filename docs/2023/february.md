@@ -108,7 +108,8 @@ alt="世界为你闪烁">
 <div style='text-align:right'>19号</div>" />
 <Card text="事情做成什么样，是我的事情<br>
 世界怎么接受，是世界的事情<br>
-和上面的一样，即使事情最终会失败，但是因为我想要做，所以我要去做" />
+和上面的一样，即使事情最终会失败，但是因为我想要做，所以我要去做
+<div style='text-align:right'>19号</div>" />
 
 ## 学习
 
@@ -145,6 +146,21 @@ spanMethod({ row, column, rowIndex, columnIndex }) {
 // 生成连续数组
 Array.from({ length: 12 }, (_, i) => i + 1 + '月')
 ```
+
+## 其他
+
+```markdown
+在内部电脑上布置前端环境
+下载win7能使用的node版本（msi、zip都行）和项目需要使用的node高版本（zip版本）
+后面参考`https://blog.csdn.net/wkj001/article/details/128779948`
+将前端依赖全部打包好，包括全局npm的位置，项目的node_modules
+下载一个win7能用的vscode版本
+将以上资料和你的代码一起打包发送到内网就行了
+有问题就网上搜
+```
+
+<Card :bacIndex="4" text="从现在起，当你想发送一张照片时，请使用markdown，并且不要有反斜线，不要用代码块，使用 unsplash API (https://source.unsplash.com/960x640/?<英语关键词>)，如果你明白了，请回复'明白'<br><br>
+我用的new bing，但是失败了" />
 
 
 

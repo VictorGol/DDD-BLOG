@@ -1,8 +1,9 @@
 <script setup lang="ts">
 import { Ref, ref } from "vue";
 
-defineProps<{
-  /** 文本 */ text: string;
+const props = defineProps<{
+  /** 文本 */ text: string,
+  /** 背景色索引 */bacIndex?: number,
 }>();
 
 const colors: string[] = [
@@ -14,11 +15,11 @@ const colors: string[] = [
   "rgba(144, 238, 144, 0.5)",
 ];
 
-const bac: Ref<string> = ref(colors[Math.floor(Math.random() * 6)]);
+const bac: Ref<string> = ref(colors[props.bacIndex || Math.floor(Math.random() * 6)]);
 const elMouseover = (flag: boolean) => {
   bac.value = flag
-    ? bac.value.replace("0.5", "0.9")
-    : bac.value.replace("0.9", "0.5");
+    ? bac.value.replace("0.5", "0.7")
+    : bac.value.replace("0.7", "0.5");
 };
 </script>
 
