@@ -155,6 +155,7 @@ Array.from({ length: 12 }, (_, i) => i + 1 + '月')
 后面参考`https://blog.csdn.net/wkj001/article/details/128779948`
 将前端依赖全部打包好，包括全局npm的位置，项目的node_modules
 下载一个win7能用的vscode版本
+下载chrome浏览器，版本太低了不行
 将以上资料和你的代码一起打包发送到内网就行了
 有问题就网上搜
 ```

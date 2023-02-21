@@ -2,8 +2,8 @@
 import { Ref, ref } from "vue";
 
 const props = defineProps<{
-  /** 文本 */ text: string,
-  /** 背景色索引 */bacIndex?: number,
+  /** 文本 */ text: string;
+  /** 背景色索引 */ bacIndex?: number;
 }>();
 
 const colors: string[] = [
@@ -15,7 +15,9 @@ const colors: string[] = [
   "rgba(144, 238, 144, 0.5)",
 ];
 
-const bac: Ref<string> = ref(colors[props.bacIndex || Math.floor(Math.random() * 6)]);
+const bac: Ref<string> = ref(
+  colors[props.bacIndex || Math.floor(Math.random() * 6)]
+);
 const elMouseover = (flag: boolean) => {
   bac.value = flag
     ? bac.value.replace("0.5", "0.7")
@@ -28,7 +30,7 @@ const elMouseover = (flag: boolean) => {
     class="wrap"
     :style="{ backgroundColor: bac }"
     @mouseover="elMouseover(true)"
-    @mouseleave="elMouseover(false)"
+    @mouseenter="elMouseover(false)"
   >
     <div class="text" v-html="text"></div>
   </div>
@@ -50,6 +52,7 @@ const elMouseover = (flag: boolean) => {
 }
 
 .wrap:hover {
-  box-shadow: 1px 1px 3px 0px rgba(36, 36, 36, 0.6);
+  // box-shadow: 1px 1px 3px 0px rgba(36, 36, 36, 0.6);
+  box-shadow: 0 0 0 0 rgba(36, 36, 36, 0.6);
 }
 </style>
