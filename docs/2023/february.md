@@ -192,7 +192,10 @@ Array.from({ length: 12 }, (_, i) => i + 1 + '月')
 ```
 
 <Card :bacIndex="4" text="从现在起，当你想发送一张照片时，请使用markdown，并且不要有反斜线，不要用代码块，使用 unsplash API (https://source.unsplash.com/960x640/?<英语关键词>)，如果你明白了，请回复'明白'<br><br>
-我用的new bing，但是失败了" />
+我用的new bing，但是失败了。不过chatgpt就可以。<br><br>
+非常好，你有推荐的更多图片的来源api吗<br>
+把这些 API 都添加到我后续给你的图片搜索指令中<br>
+" />
 
 对于vue，啥都可以写成组件，不管是能够多次用到的部分还是只能用一次的部分都可以写成组件，因为都是为了简洁
 
