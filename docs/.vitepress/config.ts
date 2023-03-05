@@ -70,6 +70,20 @@ export default defineConfig({
                     { text: '3月份', link: '/2023/march' },
                 ]
             },
+            {
+                text: '诡秘之主',
+                collapsible: true, // 可折叠
+                // collapsed: true, // 初始是否折叠
+                items: [
+                    { text: '编年史', link: '/诡秘之主/编年史' },
+                    { text: '角色', link: '/诡秘之主/角色' },
+                    { text: '超凡体系', link: '/诡秘之主/超凡体系' },
+                    { text: '道具', link: '/诡秘之主/道具' },
+                    { text: '地理', link: '/诡秘之主/地理' },
+                    { text: '概念', link: '/诡秘之主/概念' },
+                    { text: '名言', link: '/诡秘之主/名言' },
+                ]
+            },
             // {
             //     text: '关于',
             //     // collapsible: true, // 可折叠

@@ -4,6 +4,7 @@ import { Ref, ref } from "vue";
 const props = defineProps<{
   /** 文本 */ text: string;
   /** 背景色索引 */ bacIndex?: number;
+  /** 当前日期号数 */ day?: string;
 }>();
 
 const colors: string[] = [
@@ -33,6 +34,7 @@ const elMouseover = (flag: boolean) => {
     @mouseenter="elMouseover(false)"
   >
     <div class="text" v-html="text"></div>
+    <div style="text-align: right" v-if="day">{{ day }}号</div>
   </div>
 </template>
 
