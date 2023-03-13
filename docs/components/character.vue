@@ -1,6 +1,6 @@
 <script setup lang="ts">
 defineProps<{
-  name: string;
+  name?: string;
   birthday?: string;
   from?: string;
   look?: string;
@@ -13,22 +13,10 @@ defineProps<{
   deed?: string;
 }>();
 
-const bacArr = [
-  "linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%)",
-  "linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%)",
-  "linear-gradient(0deg, #D9AFD9 0%, #97D9E1 100%)",
-  "linear-gradient(62deg, #FBAB7E 0%, #F7CE68 100%)",
-  "linear-gradient(135deg, #8BC6EC 0%, #9599E2 100%)",
-  "linear-gradient(132deg, #F4D03F 0%, #16A085 100%)",
-  "linear-gradient(90deg, #74EBD5 0%, #9FACE6 100%)",
-  "linear-gradient(19deg, #FAACA8 0%, #DDD6F3 100%)",
-];
-
-const getBac = (): string => bacArr[Math.floor(Math.random() * bacArr.length)];
 </script>
 
 <template>
-  <div class="wrap" :style="{ backgroundImage: getBac() }">
+  <div class="wrap">
     <!-- 姓名 -->
     <div class="name" v-html="name"></div>
     <!-- 生日 -->
@@ -56,10 +44,7 @@ const getBac = (): string => bacArr[Math.floor(Math.random() * bacArr.length)];
 
 <style lang="scss" scoped>
 .wrap {
-  background-color: #8ec5fc;
-  background-image: linear-gradient(62deg, #8ec5fc 0%, #e0c3fc 100%);
-  padding: 20px;
-  border-radius: 20px;
+  // background-color: #ccc;
   margin-bottom: 20px;
   .name {
     font-weight: bold;
