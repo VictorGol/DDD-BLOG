@@ -62,6 +62,12 @@ export default defineConfig({
                 ]
             },
             {
+                text: '关于技术',
+                items: [
+                    { text: 'promise', link: '/tech/promise' },
+                ]
+            },
+            {
                 text: '2023年记事',
                 collapsible: true, // 可折叠
                 // collapsed: true, // 初始是否折叠
