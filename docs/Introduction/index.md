@@ -1,6 +1,6 @@
-<script setup>
+<!-- <script setup>
   import Jump from '../components/jump.vue'
-</script>
+</script> -->
 
 # 开始吧
 
@@ -8,4 +8,4 @@
 
 这个博客使用[`vitepress`](https://vitepress.vuejs.org)搭建，用来作为自己的学习笔记。
 
-<Jump />
+<!-- <Jump /> -->
