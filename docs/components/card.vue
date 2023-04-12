@@ -8,7 +8,7 @@ defineProps<{
 <template>
   <div class="wrap">
     <div class="text" v-html="text"></div>
-    <div class="text1" v-if="day">{{ day }}</div>
+    <div class="text1" v-if="day" v-html="day"></div>
   </div>
 </template>
 
@@ -16,7 +16,7 @@ defineProps<{
 .wrap {
   color: #213547;
   padding: 20px;
-  margin: 20px 0;
+  margin: 20px 0 50px 0;
   border-radius: 1rem;
   box-shadow: 0px 0.8px 2px rgba(0, 0, 0, 0.032),
     0px 2.7px 6.7px rgba(0, 0, 0, 0.048), 0px 12px 30px rgba(0, 0, 0, 0.08);
