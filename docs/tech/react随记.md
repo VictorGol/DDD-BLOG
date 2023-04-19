@@ -225,3 +225,26 @@ function TodoList({ todos, filter }) {
 }
 ```
 
+## 响应式Effects的生命周期
+
+<Card day="<a href='https://react.dev/learn/lifecycle-of-reactive-effects' target='_blank'>来自官网</a>" 
+text="
+<b>Lifecycle of Reactive Effects</b>
+<br><br>Effect只做两件事：开始同步和停止同步。cleanup函数就是停止同步。
+<br><br>组件的生命周期
+<br>mount：组件挂载时
+<br>update：组件更新时
+<br>unmount：组件卸载时
+<br><code>mount --> update --> ... --> update --> unmount.</code>
+<br><br>re-synchronize Effect
+<br>当组件更新时，Effect会重新同步：停止同步，开始新的同步。<code>render --> commit --> effect start synchronizing --> render --> commit --> effect stop synchronizing --> effect start synchronizing.</code>
+<br><br>Effect生命周期（每个Effect有独立的生命周期）
+<br><code>start synchronizing --> stop synchronizing.</code>
+<br>写Effect时，关注一次Effect的生命周期，怎么开始同步，怎么结束同步，就好。
+<br><br>react在开发阶段的mount时会强制再次执行Effect来验证Effect是否可以re-synchronize，也就是验证你的cleanup函数是否可以很好地运行。就像是开门和关门来验证你的门是否正常。
+<br><br>react怎么知道它什么时候要去re-sunchronize：每次组件re-render时，检查依赖项变化。
+<br><br>每个Effect表示一个独立的同步进程，即使两个Effect依赖相同，如果不止一个，那就分开。
+<br><br>一般state和prop是响应式的值，基于它们计算得到的值也是，也就是组件内的所有变量都是，响应式的值变化会更新组件。依赖为空时，也就是不接受响应式的值，这个Effect只会在挂载和卸载时执行同步和断开同步。当然开发阶段会执行再执行一次。
+<br><br>Effect会检查使用到的变量是否都在依赖数组里声明了，没有就会报错。
+<br><br>依赖项避免使用对象和函数。
+"/>
